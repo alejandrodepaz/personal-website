@@ -75,7 +75,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
     period: 'February 2021 – March 2025',
     bullets: [
       'Led end-to-end delivery of a greenfield billing platform for Amazon Just Walk Out, including core feature scoping, high-level and low-level designs, infrastructure bring-up, and implementation, reducing manual finance and accounting operations for billing third-party retailers by 80%',
-      'Designed and delivered React frontend for Just Walk Out GDPR privacy web portal serving global traffic, leveraging AWS CloudFront, Lambda, and WAF to enable expansion into EU and Canadian markets by supporting international customer requests and adhering to regional data governance laws (GDPR)',
+      'Designed and delivered React frontend for Amazon Just Walk Out Privacy Portal, leveraging AWS CloudFront, S3, Lambda, and WAF to enable expansion into EU and Canadian markets by supporting international customer requests for data download and erasure in order to adhere to GDPR laws',
       'Held the role of Operational Excellence lead, running bi-weekly reviews of system health and performance metrics to identify operational bottlenecks, resolve security risks, improve CI/CD efficiency, complete remediation campaigns, and enrich runbook documentation across services',
       'Served in a weekly 24-hour on-call rotation covering all team services; led incident triage, root-cause analysis, and short and long-term remediation',
       'Produced comprehensive knowledge-transfer and operational documentation (system architecture, domain knowledge, service runbooks), and led onboarding sessions and product demos for new hires, leadership, and partner teams'

@@ -1,3 +1,3 @@
 # My Personal Website
 
-Built using React + TypeScript + Vite
+Built using React + TypeScript + Vite + Claude Code
