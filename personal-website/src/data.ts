@@ -4,11 +4,11 @@
 export const NAME = 'Alejandro De Paz'
 export const TAGLINE = 'Software Engineer'
 export const BIO =
-  "Motivated software engineer with 5+ years of experience building and operating backend and frontend systems at scale, " + 
-  "most recently at Amazon. I’ve led end-to-end delivery of production services -- from early scoping and design through " +
-  "infrastructure bring-up, cross-service integrations, and long-term operational ownership. My work has focused on building " +
-  "reliable, high-availability systems that sit on critical business paths. I enjoy working at the intersection of product, " +
-  "system design, and operational excellence, delivering robust solutions that last."
+  "As a developer with 5+ years of experience building and maintaining backend and frontend systems at scale, " + 
+  "I’ve led the end-to-end delivery of numerous production services -- from early scoping and design through " +
+  "infrastructure bring-up, application implementation, cross-service integrations, and post-launch operational ownership. "
+  "My work has focused on building reliable, high-availability systems that sit on critical business paths. I enjoy working " +
+  "at the intersection of product, system design, and operational excellence, delivering robust solutions that last."
 
 export const EMAIL = 'alejandro@alejandrodepaz.com'
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/alejandrodepaz'
