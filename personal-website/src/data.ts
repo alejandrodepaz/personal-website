@@ -8,7 +8,7 @@ export const BIO =
   "most recently at Amazon. I’ve led end-to-end delivery of production services -- from early scoping and design through " +
   "infrastructure bring-up, cross-service integrations, and long-term operational ownership. My work has focused on building " +
   "reliable, high-availability systems that sit on critical business paths. I enjoy working at the intersection of product, " +
-  "system design, and operational excellence, and delivering robust solutions that last."
+  "system design, and operational excellence, delivering robust solutions that last."
 
 export const EMAIL = 'alejandro@alejandrodepaz.com'
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/alejandrodepaz'
