@@ -12,7 +12,7 @@ export const BIO =
 
 export const EMAIL = 'alejandro@alejandrodepaz.com'
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/alejandrodepaz'
-export const RESUME_URL = '/personal-website/resume.pdf'
+export const RESUME_URL = '/resume.pdf'
 
 export interface SkillCategory {
   category: string
