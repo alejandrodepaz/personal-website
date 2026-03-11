@@ -1,17 +1,37 @@
 import { useState, useRef, useEffect, type ChangeEvent, type KeyboardEvent } from 'react'
 import Fuse from 'fuse.js'
-import { QA_DATA_LIST } from '../chatData'
+import { CONTRACTIONS, QA_DATA_LIST } from '../chatData'
 
 interface Message {
   role: 'user' | 'bot'
   text: string
 }
 
+const SCORE_CUTOFF = 0.55
 const fuse = new Fuse(QA_DATA_LIST, { keys: ['questions'], includeScore: true, threshold: 0.6 })
 
+function expandContractions(text: string): string {
+  return text.replace(/\b\w+'\w+\b/gi, match => CONTRACTIONS[match.toLowerCase()] ?? match)
+}
+
 function findBestMatch(query: string) {
-  const results = fuse.search(query)
-  return results[0]?.item ?? null
+  const expanded = expandContractions(query)
+  const results = fuse.search(expanded).filter((value) => (value.score ?? 1) <= SCORE_CUTOFF)
+  console.log(results);
+  if (!results.length) return null
+
+  const lowerQuery = expanded.toLowerCase()
+
+  const scored = results.map(r => {
+    const keywordHits = r.item.keywords.filter(kw =>
+      new RegExp(`\\b${kw}\\b`, 'i').test(lowerQuery)
+    ).length
+    console.log(`[${r.item.topic}] fuse: ${r.score?.toFixed(3)}, keywordHits: ${keywordHits}, adjusted: ${((r.score ?? 1) - keywordHits * 0.3).toFixed(3)}`)
+    return { item: r.item, adjustedScore: (r.score ?? 1) - keywordHits * 0.3 }
+  })
+
+  scored.sort((a, b) => a.adjustedScore - b.adjustedScore)
+  return scored[0].item
 }
 
 const Chat = () => {
